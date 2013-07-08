@@ -1,7 +1,7 @@
 Csharp-Extensions
 =================
 
-A library of extension-methods an constructs I have to use more often.<br>
+A library of extension-methods and constructs I have to use more often.<br>
 Feel free to use and maybe suggest improvements, additions or similar.
 
 ----------------------
