@@ -25,7 +25,6 @@
                 result[i] = secondArray[j];
 
             return result;
-            // TODO : test this.
         }
     }
 }
