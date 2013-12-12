@@ -43,8 +43,14 @@ namespace CsExtensions.Console
                 System.Console.WriteLine("Invalid input");
 
             System.Console.WriteLine();
-            System.Console.WriteLine("<Enter> to exit.");
-            System.Console.ReadLine();
+            System.Console.WriteLine("<Enter> to restart.");
+            System.Console.WriteLine("<ESC>   to exit.");
+            if (System.Console.ReadKey().Key == ConsoleKey.Enter)
+            {
+                System.Console.Clear();
+                Start<T>();
+            }
+            return;
         }
 
         /// <summary>
