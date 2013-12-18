@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace CsExtensions
@@ -44,6 +43,18 @@ namespace CsExtensions
         public static string Format(this string str, params object[] objs)
         {
             return String.Format(str, objs);
+        }
+
+        /// <summary>
+        /// Short form of String.Join(...).
+        /// </summary>
+        /// <typeparam name="T">The type of the enummerables.</typeparam>
+        /// <param name="conc">Concatenation-string, combining the elements.</param>
+        /// <param name="enumerable">The elements to be joined.</param>
+        /// <returns>A string with all elements in enumerable concatenated with conc.</returns>
+        public static string Join<T>(this string conc, IEnumerable<T> enumerable)
+        {
+            return String.Join<T>(conc, enumerable);
         }
 
         /// <summary>

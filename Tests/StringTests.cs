@@ -64,6 +64,10 @@ namespace ExtensionTests
         // TODO write tests
         #endregion
 
+        #region Join
+        // TODO write tests
+        #endregion
+
         #region ParseToEnum
         // TODO write tests
         #endregion
