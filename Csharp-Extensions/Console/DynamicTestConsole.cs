@@ -30,9 +30,10 @@ namespace CsExtensions.Console
             var methods = typeof(T).GetMethods(System.Reflection.BindingFlags.Static
                 | System.Reflection.BindingFlags.Public);
             for (int i = 0; i < methods.Length; i++)
-                System.Console.WriteLine("{0,2}) {1} // {2}", i + 1, methods[i].Name,
-                    ((Comment)methods[i].GetCustomAttributes(typeof(Comment), false)[0]).Message
-                        ?? "No comment set.");
+                if (methods[i].GetCustomAttributes(typeof(ObsoleteAttribute), false).Length == 0)
+                    System.Console.WriteLine("{0,2}) {1} // {2}", i + 1, methods[i].Name,
+                        ((Comment)methods[i].GetCustomAttributes(typeof(Comment), false)[0]).Message
+                            ?? "No comment set.");
 
             int inp = 0;
             bool rl = int.TryParse(System.Console.ReadLine(), out inp);
